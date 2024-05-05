@@ -20,7 +20,7 @@ def get_start(message):
 @bot.callback_query_handler(func=lambda callback: True)
 def callback_message(callback):
     for txt in text['schedule']:
-        present = (f'{txt['lesson_number']} Урок: {txt['subject']} Учитель: {txt['teacher']} дата и время: {txt['lesson_date']} {txt['from']} - {txt['to']}')
+        present = (f"{txt['lesson_number']} Урок: {txt['subject']} Учитель: {txt['teacher']} дата и время: {txt['lesson_date']} {txt['from']} - {txt['to']}")
     if callback.data == 'Websait':
         webbrowser.open('https://raspisanie.nikasoft.ru/22811554.html#cls')
     elif callback.data == 'timetable':
