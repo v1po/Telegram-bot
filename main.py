@@ -27,12 +27,12 @@ def callback_message(callback):
         bot.send_message(callback.message.chat.id, "Расписание на сегодня:")
         for txt in text['schedule']:
             if txt['lesson_date'] == "2024-05-03":
-                present = (f'{txt['lesson_number']} Урок: {txt['subject']} Учитель: {txt['teacher']} дата и время: {txt['lesson_date']} {txt['from']} - {txt['to']}')
+                present = (f"{txt['lesson_number']} Урок: {txt['subject']} Учитель: {txt['teacher']} дата и время: {txt['lesson_date']} {txt['from']} - {txt['to']}")
                 bot.send_message(callback.message.chat.id, present)
         bot.send_message(callback.message.chat.id, "Расписание на завтра:")
         for txt in text['schedule']:
             if txt['lesson_date'] == "2024-05-04":
-                present = (f'{txt['lesson_number']} Урок: {txt['subject']} Учитель: {txt['teacher']} дата и время: {txt['lesson_date']} {txt['from']} - {txt['to']}')
+                present = (f"{txt['lesson_number']} Урок: {txt['subject']} Учитель: {txt['teacher']} дата и время: {txt['lesson_date']} {txt['from']} - {txt['to']}")
                 bot.send_message(callback.message.chat.id, present)
     elif callback.data == "help":
         bot.send_message(callback.message.chat.id, "Бот создан в обучающих целях, у него есть такие возможности как:")
@@ -57,11 +57,11 @@ def get_timetable(message):
     bot.send_message(message.chat.id, "Расписание на сегодня:")
     for txt in text['schedule']:
         if txt['lesson_date'] == "2024-05-03":
-            present = (f'{txt['lesson_number']} Урок: {txt['subject']} Учитель: {txt['teacher']} дата и время: {txt['lesson_date']} {txt['from']} - {txt['to']}')
+            present = (f"{txt['lesson_number']} Урок: {txt['subject']} Учитель: {txt['teacher']} дата и время: {txt['lesson_date']} {txt['from']} - {txt['to']}")
             bot.send_message(message.chat.id,present)
     bot.send_message(message.chat.id, "Расписание на завтра:")
     for txt in text['schedule']:
         if txt['lesson_date'] == "2024-05-04":
-            present = (f'{txt['lesson_number']} Урок: {txt['subject']} Учитель: {txt['teacher']} дата и время: {txt['lesson_date']} {txt['from']} - {txt['to']}')
+            present = (f"{txt['lesson_number']} Урок: {txt['subject']} Учитель: {txt['teacher']} дата и время: {txt['lesson_date']} {txt['from']} - {txt['to']}")
             bot.send_message(message.chat.id,present )
 bot.polling(none_stop=True)
